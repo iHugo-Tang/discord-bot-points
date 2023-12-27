@@ -88,7 +88,9 @@ app.post('/interactions', async function (req, res) {
         .where(eq(users.discordUid, user.id))
         .orderBy(desc(logs.createdAt))
         .limit(10);
-      let content = `您目前的积分: ${p[0].points}`;
+      let content = `
+您目前的积分: ${p[0].points}
+\n以下是您最近的积分变动记录:`;
       p.forEach((item, index) => {
         content += `\n${index + 1}. ${item.logs.desc}: ${item.logs.points * item.logs.type}`;
       });
