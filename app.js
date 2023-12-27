@@ -89,11 +89,9 @@ app.post('/interactions', async function (req, res) {
         .orderBy(desc(logs.createdAt))
         .limit(10);
       let content = `您目前的积分: ${p[0].points}`;
-      content += '\n========================================';
       p.forEach((item, index) => {
-        content += `\n${index + 1}. ${item.logs.desc}: ${item.logs.points}`;
+        content += `\n${index + 1}. ${item.logs.desc}: ${item.logs.points * item.logs.type}`;
       });
-      content += '\n========================================';
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
@@ -110,11 +108,9 @@ app.post('/interactions', async function (req, res) {
     } else if (name === 'leaderboard') {
       const u = await db.select().from(users).orderBy(desc(users.points)).limit(10)
       let content = '';
-      content += '========================================';
       u.forEach((user, index) => {
         content += `\n${index + 1}. ${user.nickName ?? user.discordUsername}: ${user.points}`;
       });
-      content += '\n========================================';
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
