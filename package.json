@@ -10,17 +10,21 @@
   "scripts": {
     "start": "node app.js",
     "register": "node commands.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "generate": "drizzle-kit generate:pg"
   },
   "author": "Shay DeWael",
   "license": "MIT",
   "dependencies": {
     "discord-interactions": "^3.2.0",
     "dotenv": "^16.0.3",
+    "drizzle-orm": "^0.29.2",
     "express": "^4.18.2",
-    "node-fetch": "^3.3.0"
+    "node-fetch": "^3.3.0",
+    "postgres": "^3.4.3"
   },
   "devDependencies": {
+    "drizzle-kit": "^0.20.9",
     "nodemon": "^2.0.15"
   }
 }

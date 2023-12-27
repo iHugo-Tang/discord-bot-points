@@ -1,0 +1,41 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1703683559100,
+      "tag": "0000_heavy_betty_brant",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1703685943614,
+      "tag": "0001_wandering_toro",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1703687972524,
+      "tag": "0002_optimal_umar",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1703689865485,
+      "tag": "0003_sharp_zaran",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1703690268069,
+      "tag": "0004_wet_jigsaw",
+      "breakpoints": true
+    }
+  ]
+}
